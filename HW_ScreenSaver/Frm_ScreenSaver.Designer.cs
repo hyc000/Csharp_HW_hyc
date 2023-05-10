@@ -28,19 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ScreenSaver));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picPika = new System.Windows.Forms.PictureBox();
+            this.timerGo = new System.Windows.Forms.Timer(this.components);
+            this.timerEnd = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.picPika)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picPika
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 200);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picPika.Image = ((System.Drawing.Image)(resources.GetObject("picPika.Image")));
+            this.picPika.Location = new System.Drawing.Point(12, 12);
+            this.picPika.Name = "picPika";
+            this.picPika.Size = new System.Drawing.Size(199, 200);
+            this.picPika.TabIndex = 0;
+            this.picPika.TabStop = false;
+            // 
+            // timerGo
+            // 
+            this.timerGo.Tick += new System.EventHandler(this.timerGo_Tick);
+            // 
+            // timerEnd
+            // 
+            this.timerEnd.Tick += new System.EventHandler(this.timerEnd_Tick);
             // 
             // Frm_ScreenSaver
             // 
@@ -48,17 +59,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picPika);
             this.Name = "Frm_ScreenSaver";
             this.Text = "Frm_ScreenSaver";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.Frm_ScreenSaver_Load);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Frm_ScreenSaver_MouseMove);
+            ((System.ComponentModel.ISupportInitialize)(this.picPika)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picPika;
+        private System.Windows.Forms.Timer timerGo;
+        private System.Windows.Forms.Timer timerEnd;
     }
 }
 

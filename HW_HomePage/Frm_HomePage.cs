@@ -13,6 +13,7 @@ using HW_POS;
 using HW_OneStudentScore;
 using HW_MyClac;
 using HW_Alarm;
+using HW_ScreenSaver;
 
 namespace HW_HomePage
 {
@@ -102,6 +103,10 @@ namespace HW_HomePage
             currentForm = frm;
         }
 
-       
+        private void btnScrSaver_Click(object sender, EventArgs e)
+        {
+            Frm_ScreenSaver frm = new Frm_ScreenSaver();
+            frm.Show();
+        }
     }
 }

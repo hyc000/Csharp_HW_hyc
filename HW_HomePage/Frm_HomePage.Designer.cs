@@ -167,6 +167,7 @@
             this.btnScrSaver.TabIndex = 10;
             this.btnScrSaver.Text = "Screen Saver";
             this.btnScrSaver.UseVisualStyleBackColor = true;
+            this.btnScrSaver.Click += new System.EventHandler(this.btnScrSaver_Click);
             // 
             // btnNotePad
             // 

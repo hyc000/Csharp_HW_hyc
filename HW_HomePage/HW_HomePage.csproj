@@ -104,6 +104,10 @@
       <Project>{8208491e-98e9-4dd9-89dc-2f0d41d08a06}</Project>
       <Name>HW_POS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HW_ScreenSaver\HW_ScreenSaver.csproj">
+      <Project>{bdfdae38-4a4d-43ea-aa1d-b9f5acf63a6b}</Project>
+      <Name>HW_ScreenSaver</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
